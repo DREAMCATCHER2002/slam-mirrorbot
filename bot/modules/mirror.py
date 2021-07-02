@@ -148,7 +148,7 @@ class MirrorListener(listeners.MirrorListeners):
 
     def onUploadComplete(self, link: str, size, files, folders, typ):
         with download_dict_lock:
-            msg = f'<b📪 Movie Name: </b><code>{download_dict[self.uid].name()}</code>\n<b>⭕ Size: </b><code>{size}</code>'
+            msg = f'<b>📪 Movie Name: </b><code>{download_dict[self.uid].name()}</code>\n<b>⭕ Size: </b><code>{size}</code>'
             if os.path.isdir(f'{DOWNLOAD_DIR}/{self.uid}/{download_dict[self.uid].name()}'):
                 msg += '\n<b>Type: </b><code>Folder</code>'
                 msg += f'\n<b>SubFolders: </b><code>{folders}</code>'
