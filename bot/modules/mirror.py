@@ -154,7 +154,7 @@ class MirrorListener(listeners.MirrorListeners):
                 msg += f'\n<b>🗂️ SubFolders: </b><code>{folders}</code>'
                 msg += f'\n<b>🗃️ Files: </b><code>{files}</code>'
             else:
-                msg += f'\n<b>🔋 Type:</b> <b>{typ}</b>'
+                
             buttons = button_build.ButtonMaker()
             if SHORTENER is not None and SHORTENER_API is not None:
                 surl = requests.get(f'https://{SHORTENER}/api?api={SHORTENER_API}&url={link}&format=text').text
@@ -195,7 +195,7 @@ class MirrorListener(listeners.MirrorListeners):
             else:
                 uname = f'<a href="tg://user?id={self.message.from_user.id}">{self.message.from_user.first_name}</a>'
             if uname is not None:
-                msg += f'\n\n👤 <b>Request By:</b> <b>{uname}</b>\n\n⚠ 𝗗𝗢 𝗡𝗢𝗧 𝗦𝗛𝗔𝗥𝗘 𝗜𝗡𝗗𝗘𝗫 𝗟𝗜𝗡𝗞 𝗣𝗨𝗕𝗟𝗜𝗖𝗟𝗬 ⚠\n\n<b>📨 Powered By : @MalluMovies_Links</b>'
+                msg += f'\n\n👤 <b>Request By:</b> <b>{uname}</b>\n\n⚠ 𝗗𝗢 𝗡𝗢𝗧 𝗦𝗛𝗔𝗥𝗘 𝗜𝗡𝗗𝗘𝗫 𝗟𝗜𝗡𝗞 𝗣𝗨𝗕𝗟𝗜𝗖𝗟𝗬 ⚠'
             try:
                 fs_utils.clean_download(download_dict[self.uid].path())
             except FileNotFoundError:
