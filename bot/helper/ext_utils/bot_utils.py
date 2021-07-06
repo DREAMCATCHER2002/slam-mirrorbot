@@ -106,7 +106,7 @@ def get_readable_message():
                 if download.status() == MirrorStatus.STATUS_DOWNLOADING:
                     msg += f"\n<b>📊 Pʀᴏɢʀᴇss:</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
                 else:
-                    msg += f"\n<b>Uploaded:</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
+                    msg += f"\n<b>📊 Pʀᴏɢʀᴇss:</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
                 msg += f"\n<b>🚀 Sᴘᴇᴇᴅ:</b> {download.speed()}\n<b>⏰ ETA:</b> {download.eta()} "
                 # if hasattr(download, 'is_torrent'):
                 try:
