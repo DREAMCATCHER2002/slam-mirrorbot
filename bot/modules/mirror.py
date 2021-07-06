@@ -154,7 +154,7 @@ class MirrorListener(listeners.MirrorListeners):
                 msg += f'\n<b>🗂️ SubFolders: </b><code>{folders}</code>'
                 msg += f'\n<b>🗃️ Files: </b><code>{files}</code>'
             else:
-                
+                msg += f'\n<b>📦 Type: </b><code>{typ}</code>'
             buttons = button_build.ButtonMaker()
             if SHORTENER is not None and SHORTENER_API is not None:
                 surl = requests.get(f'https://{SHORTENER}/api?api={SHORTENER_API}&url={link}&format=text').text
