@@ -395,7 +395,7 @@ class GoogleDriveHelper:
                 except:
                     typeee = 'File' 
                 try:
-                    msg += f'\n<b>💽 Sɪᴢᴇ :</b> <b>{get_readable_file_size(int(meta.get("size")))}</b>'
+                    msg += f'\n\n<b>💽 Sɪᴢᴇ :</b> <b>{get_readable_file_size(int(meta.get("size")))}</b>'
                     msg += f'\n<b>📦 Tʏᴘᴇ :</b> <b>{typeee}</b>'
                 except TypeError:
                     pass
