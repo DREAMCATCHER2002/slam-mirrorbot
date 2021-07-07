@@ -356,7 +356,7 @@ class GoogleDriveHelper:
                 dir_id = self.create_directory(meta.get('name'), parent_id)
                 self.cloneFolder(meta.get('name'), meta.get('name'), meta.get('id'), dir_id)
                 msg += f'<b>📂 Mᴏᴠɪᴇ Nᴀᴍᴇ : </b><code>{meta.get("name")}</code>\n\n<b>💽 Sɪᴢᴇ :</b> <b>{get_readable_file_size(self.transferred_size)}</b>'
-                msg += f'\n<b>📦 Tʏᴘᴇ : </b><code>Folder</code>'
+                msg += f'\n<b>📦 Tʏᴘᴇ :</b> <b>Folder</b>'
                 msg += f'\n<b>🗂️ SᴜʙFᴏʟᴅᴇʀs :</b> <b>{self.total_folders}</b>'
                 msg += f'\n<b>🗃️ Fɪʟᴇs :</b> <b>{self.total_files}</b>'
                 durl = self.__G_DRIVE_DIR_BASE_DOWNLOAD_URL.format(dir_id)
