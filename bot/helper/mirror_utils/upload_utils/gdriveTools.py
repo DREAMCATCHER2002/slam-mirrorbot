@@ -620,13 +620,13 @@ class GoogleDriveHelper:
                 self.telegraph_content.append(msg)
 
             if len(self.telegraph_content) == 0:
-                return "No Result Found ❌", None
+                return "❌ No Result Found ☹️", None
 
             for content in self.telegraph_content :
                 self.path.append(Telegraph(access_token=telegraph_token).create_page(
-                                                        title = 'Slam Mirror Bot Search',
-                                                        author_name='Slam Mirror Bot',
-                                                        author_url='https://github.com/breakdowns/slam-mirrorbot',
+                                                        title = 'MM Mirror Bot Search',
+                                                        author_name='@WhitE_DeviL09',
+                                                        author_url='https://t.me/White_Devil09',
                                                         html_content=content
                                                         )['path'])
 
@@ -634,9 +634,9 @@ class GoogleDriveHelper:
             if self.num_of_path > 1:
                 self.edit_telegraph()
 
-            msg = f"<b>Found {len(response['files'])} results for <i>{fileName}</i></b>"
+            msg = f"<b>📁 Found {len(response['files'])} Results for <i>{fileName}</i></b>"
             buttons = button_build.ButtonMaker()   
-            buttons.buildbutton("🔎 VIEW", f"https://telegra.ph/{self.path[0]}")
+            buttons.buildbutton("🔎 VIEW YOUR RESULTS 🔍", f"https://telegra.ph/{self.path[0]}")
 
             return msg, InlineKeyboardMarkup(buttons.build_menu(1))
 
